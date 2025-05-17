@@ -26,7 +26,7 @@ GREETING_TEXT_RU = (
 )
 GREETING_TEXT_EN = (
     "Hi, I'm a 12-step sponsor bot here to help you work through the steps. 😊\n\n"
-    "You can ask things like: \"What are some example answers for ... point in step ...?\" and I’ll help you."
+    "You can ask things like: \"What are some answer examples for ... in step ...?\" and I’ll help you."
 )
 
 # Команда /start
