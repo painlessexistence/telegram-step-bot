@@ -90,8 +90,8 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 async def about_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        """🧠 Я бот-наставник по 12 шагам. Работаю на базе Claude 3 Haiku через OpenRouter."
-        "Помогаю с примерами, формулировками, осмыслением. Разработан с заботой ❤️"""
+        """🧠 Я бот-наставник по 12 шагам. Работаю на базе Claude 3 Haiku через OpenRouter.
+        Помогаю с примерами, формулировками, осмыслением. Разработан с заботой ❤️"""
     )
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
