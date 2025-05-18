@@ -81,17 +81,17 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 • «Я боюсь быть отвергнутым — как это можно описать?»
 
 📌 Команды:
-/language – выбрать язык
 /start – вернуться к выбору языка
 /examples – подсказка по примерам
 /reset – начать с нуля
 /help – помощь
-/about – информация о боте"""
+/about – информация о боте
+/language – выбрать язык"""
     )
 async def about_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        """🧠 Я бот-наставник по 12 шагам. Работаю на базе Claude 3 Haiku через OpenRouter.
-    Помогаю с примерами, формулировками, осмыслением. Разработан с заботой ❤️"""
+        """🧠 Я бот-наставник по 12 шагам. Работаю на базе Claude 3 Haiku через OpenRouter.\n"
+        "Помогаю с примерами, формулировками, осмыслением. Разработан с заботой ❤️"""
     )
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -124,12 +124,12 @@ def ask_openrouter(user_message, system_prompt):
 
 def main():
     app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
-    app.add_handler(CommandHandler("language", language))
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("examples", examples_command))
     app.add_handler(CommandHandler("reset", reset_command))
     app.add_handler(CommandHandler("help", help_command))
     app.add_handler(CommandHandler("about", about_command))
+    app.add_handler(CommandHandler("language", language))
     app.add_handler(CallbackQueryHandler(language_selection))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     print("Бот запущен...")
